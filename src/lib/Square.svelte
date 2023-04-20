@@ -3,9 +3,7 @@
 </script>
 
 <button class="square" on:click>
-  {#if value}
-    {value}
-  {/if}
+  {value ? value : ""}
 </button>
 
 <style>

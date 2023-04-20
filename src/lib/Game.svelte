@@ -59,11 +59,10 @@
   <Board on:move={move} {squares} />
   <div class="results-section">
     {#if winner}
-      <Results message={`Winner is ${winner}!`} on:reset={reset} />
-      <p>{turn}</p>
+      <Results on:reset={reset}>{`Winner is ${winner}!`}</Results>
     {/if}
     {#if !winner && turn >= 9}
-      <Results message="The game is a draw!" on:reset={reset} />
+      <Results on:reset={reset}>The game is a draw!</Results>
     {/if}
   </div>
 </div>
